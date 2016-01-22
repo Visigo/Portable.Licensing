@@ -72,6 +72,15 @@ namespace Portable.Licensing
         }
 
         /// <summary>
+        /// Gets or sets the product name this <see cref="License"/> applies to.
+        /// </summary>
+        public String Product
+        {
+            get { return GetTag("Product") ?? ""; }
+            set { if (!IsSigned) SetTag("Product", value); }
+        }
+
+        /// <summary>
         /// Gets or set the <see cref="LicenseType"/> or this <see cref="License"/>.
         /// </summary>
         public LicenseType Type
@@ -167,7 +176,7 @@ namespace Portable.Licensing
         /// <summary>
         /// Gets or sets the expiration date of this <see cref="License"/>.
         /// Use this property to set the expiration date for a trial license
-        /// or the expiration of support & subscription updates for a standard license.
+        /// or the expiration of support and subscription updates for a standard license.
         /// </summary>
         public DateTime Expiration
         {

@@ -44,6 +44,18 @@ namespace Portable.Licensing
             license = new License();
         }
 
+
+        /// <summary>
+        /// Sets the product name of the <see cref="License"/>.
+        /// </summary>
+        /// <param name="product">The product name of the <see cref="License"/>.</param>
+        /// <returns>The <see cref="ILicenseBuilder"/>.</returns>
+        public ILicenseBuilder WithProduct(string product)
+        {
+            license.Product = product;
+            return this;
+        }
+
         /// <summary>
         /// Sets the unique identifier of the <see cref="License"/>.
         /// </summary>

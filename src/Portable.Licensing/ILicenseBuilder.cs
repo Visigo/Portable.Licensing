@@ -34,6 +34,13 @@ namespace Portable.Licensing
     public interface ILicenseBuilder : IFluentInterface
     {
         /// <summary>
+        /// Sets the product name of the <see cref="License"/>.
+        /// </summary>
+        /// <param name="product">The product name of the <see cref="License"/>.</param>
+        /// <returns>The <see cref="ILicenseBuilder"/>.</returns>
+        ILicenseBuilder WithProduct(string product);
+
+        /// <summary>
         /// Sets the unique identifier of the <see cref="License"/>.
         /// </summary>
         /// <param name="id">The unique identifier of the <see cref="License"/>.</param>
