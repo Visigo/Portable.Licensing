@@ -100,7 +100,7 @@ namespace Portable.Licensing.Tests
         [Test]
         public void Can_Validate_Expired_ExpirationDate()
         {
-            var publicKey = "";
+            //var publicKey = "";
             var licenseData = @"<License>
                                   <Id>77d4c193-6088-4c64-9663-ed7398ae8c1a</Id>
                                   <Type>Trial</Type>
