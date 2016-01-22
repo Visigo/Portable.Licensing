@@ -245,6 +245,10 @@ namespace Portable.Licensing
 
                 return signer.VerifySignature(Convert.FromBase64String(signTag.Value));
             }
+            catch
+            {
+                return false;
+            }
             finally
             {
                 xmlData.Add(signTag);
